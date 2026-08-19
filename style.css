@@ -1,44 +1,60 @@
-*{
-    padding: 0%;
+* {
+    box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+    background-color: #fffaf2;
+    color: #222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .title{
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
-    color: #222;
     font-size: large;
+    padding: 24px 20px 8px;
 }
 header{
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    justify-items: center;
-    
+    padding: 12px 20px 28px;
 }
 nav{
     display: flex;
     justify-content:center;
-    gap: 80px;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    width: 700px;
-    height: 20px;
+    gap: clamp(24px, 6vw, 80px);
+    padding: 15px 24px;
+    margin: 0 auto;
+    background-color: #fff;
+    width: min(700px, 100%);
     border: 1px solid black;
     border-radius: 16px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.contents,
+.buttons{
+    width: min(1200px, calc(100% - 64px));
+}
+.image{
+    width: 1400px;
+    height: auto;
+}
 .contents{
     text-align: left;
-    padding-left: 44px;
-    padding-top: 60px;
-    color: black;
+    padding-top: 58px;
     font-size: large;
+}
+.contents h1 {
+    line-height: 1.15;
+    margin: 12px 0 18px;
+}
+.contents p {
+    line-height: 1.7;
 }
 .contents h1 span {
     color: orange;
 }
 .buttons{
-    padding-left: 44px;
+    padding-top: 12px;
 }
 .buttons button {
     background-color: orange;
@@ -50,28 +66,22 @@ nav{
     border-radius: 8px;
 }
 .image {
-    position: absolute;
-    right: 120px;
-    top: 225px;
-    bottom: 50px;
+    margin-top: 42px;
 }
 .image img {
-    width: 800px;
-    height: 450px;
+    display: block;
+    width: 100%;
+    height: min(450px, 42vw);
     object-fit: cover;
     border-radius: 16px;
 }
 .menu {
-    align-content: left;
-    margin-top: 200px;
-}
-.menu {
-    width: 100%;
-    padding: 30px 32px;
+    width: min(1200px, calc(100% - 64px));
+    margin: 72px auto 0;
+    padding: 0 0 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-    box-sizing: border-box;
 }
 
 .menu-card {
@@ -127,36 +137,32 @@ nav{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: medium;
     color: #222;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 .Reservation {
-    width: 100%;
-    padding: 30px 50px 80px;
-    box-sizing: border-box;
+    width: min(1200px, calc(100% - 64px));
+    margin: 38px auto 0;
+    padding: 30px 0 80px;
 }
 .reservation-title {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 60px;
+    margin: 0 0 38px;
     color: #222;
 }
 .reservation-content {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 80px;
+    gap: clamp(28px, 6vw, 80px);
     width: 100%;
-    padding-left: 10px;
-    box-sizing: border-box;
 }
 .reservation-image {
-    width: 800px;
-    flex-shrink: 0;
+    flex: 1 1 60%;
 }
 .reservation-image img {
-    width: 800px;
+    width: 100%;
     height: 550px;
     object-fit: cover;
     border-radius: 16px;
@@ -219,4 +225,10 @@ nav{
     font-weight: bold;
     margin: 0 0 60px;
     color: #222;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 180px;
 }
